@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner</title>
+    <link rel="stylesheet" href="todo_dz.css">
+    
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <div id="app">
+    <div class="container">
+      <div class="form">
+        <input type="text" v-bind:value="valueInput" @input="handlyInput">
+        <button class="btn" @click="addTodo">+</button>
+      </div>
+    </div>
+    <div class="container">
+      <h2>
+        <span>Задачи</span>
+      </h2>
+    </div>
+    <ul class="mask-list">
+      <li  v-for="(mask, index) in needDoList" :key="mask.id">
+        <div>
+          <input type="checkbox">
+          <span>{{mask.title}}</span>
+        </div>
+        <button class="btn-remove" @click="removeTodo(index, 'need')">Удалить</button>
+      </li>
+    </ul>
+  </div>
+  
+ 
+  <script src="todo_dz.js"></script>
+</body>
+  </html>

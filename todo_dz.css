@@ -87,7 +87,6 @@ body {
       padding: 10px;
       font-size: 12px;
       outline: none;
-      transition: 0.2s;
   }
   
   input[type="checkbox"]:checked,
